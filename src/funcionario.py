@@ -1,6 +1,7 @@
 from datetime import date
 
-from mysql import connector 
+from banco_dados import conectar
+
 #e pip install mysql-connector-python
 # py -m pip install mysql-connector-python
 
@@ -15,16 +16,7 @@ SENHA = "admin"
 BANCO = "restau_calabresa"
 
 
-def conectar():
-    """Abre a conexão com MYSQL e retorna ela"""
-    conexao = connector.connect(
-        host=HOST,
-        port=PORTA,
-        user=USUARIO,
-        password=SENHA,
-        database=BANCO,
-    )
-    return conexao
+
 
 
 def cadastrar():

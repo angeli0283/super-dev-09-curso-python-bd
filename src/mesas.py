@@ -1,4 +1,5 @@
-from mysql import connector
+
+from banco_dados import conectar
 import os
 
 HOST = "127.0.0.1"
@@ -7,15 +8,6 @@ USUARIO = "root"
 SENHA = "admin"
 BANCO = "restau_calabresa"
 
-def conectar():
-    conexao = connector.connect(
-        host=HOST,
-        port=PORTA,
-        user=USUARIO,
-        password=SENHA,
-        database=BANCO,
-    )
-    return conexao
 
 def cadastrar():
     print("\n--- CADASTRAR MESA ---")
